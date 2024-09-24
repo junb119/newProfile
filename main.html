@@ -34,9 +34,9 @@
   <body>
     <header>
       <nav>
-        <h1><a href="./index.html">Go Intro</a></h1>
+        <h1><a href="./index.html"><i class="fa-solid fa-house"></i></a></h1>
         <ul class="df">
-          <li><a href="#" class="active">about me</a></li>
+          <li><a href="#" class="active">about</a></li>
           <li><a href="#">skill ability</a></li>
           <li><a href="#">porfolio</a></li>
           <li><a href="#">contact</a></li>
@@ -46,7 +46,7 @@
     <div id="loading-screen">
       <div class="spinner"></div>
     </div>
-    <main id="main-content" style="">
+    <main id="main-content">
       <!-- Slider main container -->
 
       <div class="swiper">
@@ -54,32 +54,31 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <section id="about" class="swiper-slide slide1">
-            <div class="slide_wrapper">
-              <div class="title_container"><h2>about me</h2></div>
-              <div id="about_content" class="about_container">
-                <!-- <h3>Hello I'm 우준범</h3>
-                <p>1992.01.19</p>
-                <p>주소지 : 서울시 광진구</p>
-                <p>이메일 : emfwokd@gmail.com</p>
-                <p>안녕하세요. frontend 개발자 우준범입니다.</p>
-                <div class="contact_link">
-                  <p>
+            <div class="bg_wrapper">
+              <canvas id='about_bg'></canvas>
+            </div>
+            <div class="slide_wrapper df fdc">
+              <div class="title_container"><h2>about</h2></div>
+              <div class="about_container df fdc">
+                <ul class="about_tag">
+                  <li><p>Hello I'm 우준범</pㅔ></li>
+                  <li><p>1992-01-19</p></li>
+                  <li><p>서울시 광진구</p></li>
+                  <li><p>emfwokd@gmail.com</p></li>
+                  <li><p>경기대학교</p></li>
+                  <li>
                     <a href="https://github.com/junb119" target="_blank"
-                      >github</a
+                      >Github</a
                     >
-                  </p>
-                  <p>
-                    <a href="https://velog.io/@junb119/" target="_blank"
-                      >velog</a
-                    >
-                  </p>
-                </div> -->
+                  </li>
+                </ul>
+                <div id="word_cloud"></div>
               </div>
             </div>
           </section>
           <section id="skill" class="swiper-slide slide2 df fdc aic">
             <div class="bg_wrapper">
-              <canvas id="canvas"></canvas>
+              <canvas id="skill_bg"></canvas>
             </div>
             <div class="slide_wrapper df fdc">
               <div class="title_container">
@@ -127,7 +126,7 @@
               </div>
             </div>
 
-            <div class="slide_wrapper">
+            <div class="slide_wrapper df fdc">
               <div class="title_container">
                 <h2 class="">portfolio</h2>
                 <div class="list_nav fdc">
@@ -141,30 +140,18 @@
                     <button data-filter=".javascript">javascript</button>
                     <button data-filter=".jquery">jquery</button>
                     <button data-filter=".react">react</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
+                    <button data-filter=".PHP">PHP</button>
                   </div>
                 </div>
               </div>
               <div class="portfolio_container">
-                <div class="grid">
-                  <!-- <figure
-                    class="grid-item web_project javascript jquery *"
-                  >
-                    <img src="./img/mirae.png" alt="" />
-                    <figcaption id="mirae">미래에셋 리뉴얼 페이지</figcaption>
-                  </figure>
-                  <figure class="grid-item toy_project javascript *">
-                    <img src="./img/pika.webp" alt="" />
-                    <figcaption id="pokemon">포켓몬 카드</figcaption>
-                  </figure>
-                  <figure class="grid-item --width2 web_project javascript *">
-                    <img src="./img/starbucks_bg.png" alt="" />
-                    <figcaption id="starbucks">스타벅스 메인 페이지</figcaption>
-                  </figure>
-                  <figure class="grid-item --width2 toy_project javascript *">
-                    <img src="./img/puzzle.webp" alt="" />
-                    <figcaption>포켓몬 카드</figcaption>
-                  </figure> -->
-                </div>
+                <div class="grid"></div>
               </div>
             </div>
           </section>
@@ -212,13 +199,13 @@
                       class="form-control"
                       placeholder="content"
                       id="contact_content"
-                      style="height: 400px"
+                      style="height: 300px"
                       name="message"
                       required
                     ></textarea>
                     <label for="contact_content">내용</label>
                   </div>
-                  <button type="submit" class="btn btn-success">보내기</button>
+                  <button type="submit" class="btn btn-primary">보내기</button>
                   <div style="display: none" class="thankyou_message">
                     <p>
                       메일 전송이 완료되었습니다 <br />확인 후 연락드리겠습니다.

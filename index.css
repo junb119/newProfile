@@ -293,61 +293,71 @@ body.before-load {
   height: 100vh;
 }
 .scroll_icon {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  /* position: sticky; */
-  margin: auto;
-  /* transform: translateX(-50%); */
-  position: fixed;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  top: 100%;
+  transform: translate(-50%, calc(-50% - 64px));
   z-index: 100;
-  transform: translate(-50%, -100%);
-  text-transform: capitalize;
-  animation: twinkle 2s ease-in-out infinite;
-  opacity: 1;
-  transition: opacity 0.3s;
 }
-@keyframes twinkle {
+.scroll_icon a {
+  padding-top: 130px;
+  display: inline-block;
+  color: white;
+  font-size: 32px;
+}
+.scroll_icon a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.scroll_icon a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.scroll_icon a span:nth-of-type(2) {
+  top: 32px;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+.scroll_icon a span:nth-of-type(3) {
+  top: 64px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+@-webkit-keyframes sdb {
   0% {
-    color: var(--C-blue);
+    opacity: 0;
   }
   50% {
-    color: var(--C-orange);
+    opacity: 1;
   }
   100% {
-    color: var(--C-blue);
+    opacity: 0;
   }
 }
-.scroll_icon span {
-  font-size: var(--T-P);
-  line-height: calc(var(--T-P) * 1.618);
-}
-.scroll_icon div {
-  text-indent: -9999em;
-  animation: twinkle2 2s ease-in-out infinite;
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes twinkle2 {
-  0% {
-    background: var(--C-blue);
-  }
-  50% {
-    background: var(--C-orange);
-  }
-  100% {
-    background: var(--C-blue);
-  }
-}
-.scroll_icon div:first-of-type {
-  width: 3px;
-  height: 40px;
-}
-.scroll_icon div:last-child {
-  width: 1px;
-  height: 30px;
-}
 /* ---scroll-icon */
 
 .go-main-btn {
@@ -433,7 +443,7 @@ body.before-load {
   .go-main-btn a {
     font-size: 4rem;
     padding: 2.5rem;
-    border-radius: 8rem; ;
+    border-radius: 8rem;
   }
   .go-main-btn a span {
     margin-left: 2rem;
