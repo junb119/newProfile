@@ -1,0 +1,23 @@
+{
+  "name": "newprofile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.10.39",
+    "get-size": "^3.0.0",
+    "isotope-layout": "^3.0.6",
+    "outlayer": "^2.1.1",
+    "packery": "^2.1.2"
+  }
+}
