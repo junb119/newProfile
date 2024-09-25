@@ -11,9 +11,7 @@ body {
   font-size: var(--baseFontSize);
   font-family: "Montserrat", "Noto Sans", sans-serif;
 }
-g {
-  /* display: none; */
-}
+
 /* Layout */
 
 /* **flex */
@@ -190,6 +188,41 @@ header a.active {
   gap: 10px;
   text-align: center;
 }
+.about_tag li {
+  opacity: 0;
+}
+.about_tag.open li {
+  animation: showTag 1s forwards;
+}
+@keyframes showTag {
+  from {
+    /* opacity: 0; */
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1; /* 최종 투명도 */
+    transform: translateX(0%); /* 최종 위치 */
+  }
+}
+
+.about_tag li:nth-child(1) {
+  animation-delay: 0s;
+}
+.about_tag li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.about_tag li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.about_tag li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.about_tag li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.about_tag li:nth-child(6) {
+  animation-delay: 1s;
+}
 
 #about .about_container {
   flex: 1;
@@ -347,7 +380,7 @@ header a.active {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .grid-item figcaption {
@@ -506,6 +539,81 @@ header a.active {
   line-height: 1.6;
 }
 /* contact */
+/* 로딩 화면 스타일 */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 커튼 스타일 */
+.curtain {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #333;
+}
+
+.curtain.top {
+  top: -50%;
+
+  transform: translateY(100%);
+}
+
+.curtain.bottom {
+  bottom: -50%;
+  transform: translateY(-100%);
+}
+
+/* 메인 콘텐츠 스타일 */
+#main-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+
+@keyframes curtain-open {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+#spinner.open {
+  display: none;
+}
+.curtain.top.open {
+  animation: curtain-open 1s forwards ease-in-out;
+}
+
+.curtain.bottom.open {
+  animation: curtain-open 1s forwards ease-in-out;
+}
 
 @media screen and (max-width: 768px) {
   :root {

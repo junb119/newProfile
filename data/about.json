@@ -1,115 +1,114 @@
 [
   {
     "tag": "계획적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "긍정적",
-    "weight": 50
+    "weight": 5
   },
   {
     "tag": "창의적",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "유연성",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "합리적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "도전적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "호기심 많은",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "솔직한",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "활기찬",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "정직한",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "과묵한",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "상상력",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "열정적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "일관적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "인내력",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "주체적인",
-    "weight": 40
+    "weight": 4
   },
   {
-    "tag": "침착한",
-    "weight": 40
+    "tag": "차분한",
+    "weight": 4
   },
   {
     "tag": "학구열 있는",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "협동적인",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "희망적인",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "의욕적인",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "자제력",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "직관적",
-    "weight": 30
+    "weight": 3
   },
   {
     "tag": "노래",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "영화 감상",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "글쓰기",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "대구",
-    "weight": 40
+    "weight": 4
   },
   {
     "tag": "국어국문",
-    "weight": 30
+    "weight": 3
   }
-  
 ]
