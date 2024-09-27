@@ -3,21 +3,8 @@ canvas {
   top: 0;
   left: 0;
 }
-/* 
-html,
-body {
-  height: 100%;
-}
 
-html {
-  background: #eee;
-} */
-/* 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+/* contact */
 #contact {
   position: relative;
   padding-top: 0;
@@ -83,3 +70,4 @@ body {
     transform: rotate(360deg);
   }
 }
+/* contact */

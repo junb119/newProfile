@@ -1,21 +1,3 @@
-// window.onload = () => {
-//   window.onload = () => {
-// const loadingScreen = document.getElementById("loading-screen");
-// const curtains = document.querySelectorAll(".curtain");
-// const mainContent = document.getElementById("main-content");
-
-// // 커튼 애니메이션 시작
-// curtains.forEach((curtain) => {
-//   curtain.classList.add("open");
-// });
-
-// // 커튼이 열리는 시간을 고려해 1초 후에 로딩 화면을 숨기고 메인 콘텐츠를 표시
-// setTimeout(() => {
-//   loadingScreen.classList.add("hide-loading");
-//   mainContent.style.display = "block";
-//   document.body.classList.add("show-content");
-// }, 1000); // 커튼 애니메이션 시간에 맞춰 설정
-//   }
 window.addEventListener("load", () => {
   const mainContnet = document.querySelector("#main-content");
   const loadingScreen = document.querySelector("#loading-screen");
@@ -37,37 +19,23 @@ window.addEventListener("load", () => {
       fetchData("./data/about.json", fetchAbout);
       setIsotope();
     }, 1000);
-  }, 500);
+  }, 1000);
 });
 
 const navs = document.querySelectorAll("header li");
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   simulateTouch: false,
   direction: "horizontal",
-  // If we need pagination
-  pagination: {
-    // el: '.swiper-pagination',
-  },
+  pagination: {},
   on: {
     slideChange: function () {
       // 현재 슬라이드 인덱스 가져오기
       const currentIndex = this.activeIndex;
       navs.forEach((nav, idx) => {
         nav.querySelector("a").classList.remove("active");
-        if (currentIndex == 2) {
-          // setIsotope();
-          // setTimeout(() => {
-          //   setIsotope();
-          // },100);
-        }
       });
       navs[currentIndex].querySelector("a").classList.add("active");
     },
-  },
-  // And if we need scrollbar
-  scrollbar: {
-    // el: '.swiper-scrollbar',
   },
 });
 
@@ -90,22 +58,19 @@ function fetchData(path, callback, ...extra) {
         return response.json();
       })
       .then((datas) => {
-        callback(datas, ...extra); // 데이터를 처리하는 콜백 호출
+        callback(datas, ...extra);
         resolve(); // 작업 완료 시 resolve 호출
       })
       .catch((error) => {
         console.error("Error fetching the portfolio:", error);
-        reject(error); // 에러가 발생하면 reject 호출
+        reject(error);
       });
   });
 }
 
 // about
-
 function fetchAbout(datas) {
   am4core.useTheme(am4themes_animated);
-  // Themes end
-
   var chart = am4core.create("word_cloud", am4plugins_wordCloud.WordCloud);
   var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
 
@@ -132,7 +97,6 @@ function fetchAbout(datas) {
       s.style.display = "none";
   }
 }
-
 // ---about
 
 // skill
@@ -216,7 +180,6 @@ function setIsotope() {
     layoutMode: "masonry", // layoutMode를 packery로 변경
     masonry: {
       gutter: 5, // 아이템 간격
-      // 열 크기 설정 (원하는대로 변경 가능)
       // columnWidth: 120,
       // horizontalOrder: true,
       fitWidth: true,
@@ -224,7 +187,6 @@ function setIsotope() {
     // originLeft: false,
   });
   iso.arrange({ filter: "*" });
-  // Handle button clicks
   document
     .querySelectorAll("#portfolio .button-group")
     .forEach(function (buttonGroup) {
@@ -282,63 +244,6 @@ function fetchPortfolio(data) {
   });
 }
 
-// function setDialog() {
-//   const thumbs = document.querySelectorAll("#portfolio figcaption");
-
-//   thumbs.forEach((thumb) => {
-//     thumb.addEventListener("click", () => {
-//       fetch("./data/portfolio.json")
-//         .then((response) => response.json())
-//         .then((datas) => {
-//           const id = thumb.getAttribute("id");
-//           const dialog = document.getElementById("dialog-content");
-//           const dialogImg = dialog.querySelector(".portfolio_dialog_bg img");
-//           const dialogTitle = dialog.querySelector(
-//             ".portfolio_dialog_textBox h3"
-//           );
-//           const dialogDirect = dialog.querySelector(
-//             ".portfolio_dialog_textBox .portfolio_direct"
-//           );
-//           const dialogSkills = dialog.querySelector(
-//             ".portfolio_dialog_textBox ul"
-//           );
-//           const dialogDesc = dialog.querySelector(
-//             ".portfolio_dialog_textBox .dialog_desc"
-//           );
-//           const dialogFeauture = dialog.querySelector(
-//             ".portfolio_dialog_textBox .feature ul"
-//           );
-//           for (let data of datas) {
-//             if (data.id === id) {
-//               dialogImg.setAttribute("src", data.bg);
-//               dialogImg.setAttribute("alt", data.title);
-//               dialogTitle.innerText = data.title;
-//               dialogDirect.setAttribute("href", data.github);
-//               let skilllist = "";
-//               data.skills.forEach((skill) => {
-//                 skilllist += `<li>${skill}</li>`;
-//               });
-//               dialogSkills.innerHTML = skilllist;
-//               let descList = "";
-//               data.desc.forEach((desc) => {
-//                 descList += `<p>${desc}</p>`;
-//               });
-//               dialogDesc.innerHTML = descList;
-//               features = "";
-//               data.feature.forEach((feature) => {
-//                 features += `<li>${feature}</li>`;
-//               });
-//               dialogFeauture.innerHTML = features;
-//             }
-//           }
-//           Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
-//         })
-//         .catch((error) => {
-//           console.error("Error fetching the portfolio:", error);
-//         });
-//     });
-//   });
-// }
 function setDialog(datas, thumb) {
   const id = thumb.getAttribute("id");
   const dialog = document.getElementById("dialog-content");
@@ -346,6 +251,9 @@ function setDialog(datas, thumb) {
   const dialogTitle = dialog.querySelector(".portfolio_dialog_textBox h3");
   const dialogDirect = dialog.querySelector(
     ".portfolio_dialog_textBox .portfolio_direct"
+  );
+  const dialogGit = dialog.querySelector(
+    ".portfolio_dialog_textBox .portfolio_git"
   );
   const dialogSkills = dialog.querySelector(".portfolio_dialog_textBox ul");
   const dialogDesc = dialog.querySelector(
@@ -359,7 +267,14 @@ function setDialog(datas, thumb) {
       dialogImg.setAttribute("src", data.bg);
       dialogImg.setAttribute("alt", data.title);
       dialogTitle.innerText = data.title;
-      dialogDirect.setAttribute("href", data.github);
+      dialogDirect.setAttribute("href", data.path);
+      console.log(data.github);
+      if (data.github === "null") {
+        dialogGit.classList.add("null");
+      } else {
+        dialogGit.classList.remove("null");
+        dialogGit.setAttribute("href", data.github);
+      }
       let skilllist = "";
       data.skills.forEach((skill) => {
         skilllist += `<li>${skill}</li>`;
@@ -381,4 +296,3 @@ function setDialog(datas, thumb) {
 }
 
 // --portfolio
-// };

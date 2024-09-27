@@ -229,11 +229,10 @@ header a.active {
 }
 .about_tag > li > * {
   display: inline-block;
-  background: #333;
+  background: beige;
   padding: 20px;
-  color: white;
+  color: #333;
   font-size: 1.5em;
-  border-radius: 1.5em;
 }
 #word_cloud {
   margin: 0 auto;
@@ -396,6 +395,10 @@ header a.active {
   align-items: center;
   opacity: 0;
   transition: 0.3s;
+  text-transform: capitalize;
+  word-break: keep-all;
+  line-height: 1.6;
+  text-align: center;
 }
 .grid-item:hover figcaption {
   opacity: 1;
@@ -406,13 +409,14 @@ header a.active {
   display: none;
   flex-direction: row;
   gap: 20px;
-  width: 90%;
-  height: 80%;
+  max-width: 90%;
+  max-height: 80%;
   padding: 1rem;
 }
 #dialog-content .portfolio_dialog_bg {
   position: relative;
-  flex: 1.5;
+  flex: 1;
+  min-width: 50%;
 }
 .portfolio_dialog_bg img {
   width: 100%;
@@ -422,7 +426,7 @@ header a.active {
 }
 #dialog-content .portfolio_dialog_textBox {
   position: relative;
-  flex: 1;
+  /* flex: 1; */
   gap: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -430,13 +434,16 @@ header a.active {
 
 .portfolio_dialog_textBox h3 {
   display: inline;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   line-height: 1.4;
   color: white;
   text-transform: capitalize;
+  word-break: keep-all;
 }
 .portfolio_dialog_textBox .skill_list {
   display: flex;
+  flex-wrap: wrap;
+
   gap: 0.5rem;
 }
 .portfolio_dialog_textBox .skill_list li {
@@ -447,6 +454,9 @@ header a.active {
   text-transform: uppercase;
   color: white;
   letter-spacing: 2px;
+}
+.portfolio_git.null {
+  display: none;
 }
 .portfolio_dialog_textBox .dialog_desc {
   color: white;
@@ -627,11 +637,17 @@ header a.active {
     flex-direction: column;
   }
   #dialog-content .portfolio_dialog_bg {
-    height: 20%;
+    max-height: 40%;
+    flex: 1;
   }
   #dialog-content .portfolio_dialog_textBox {
-    flex: 4;
+    flex: 2;
+    text-align: center;
   }
+  .portfolio_dialog_textBox .skill_list {
+    justify-content: center;
+  }
+  
   .contact_form {
     width: 350px;
   }
@@ -661,5 +677,8 @@ header a.active {
   }
   .skill_box ul li {
     width: 100%;
+  }
+  .portfolio_dialog_textBox h3 {
+    text-align: center;
   }
 }

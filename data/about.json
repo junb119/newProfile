@@ -1,7 +1,7 @@
 [
   {
     "tag": "계획적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "긍정적",
@@ -13,15 +13,15 @@
   },
   {
     "tag": "유연성",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "합리적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "도전적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "호기심 많은",
@@ -29,7 +29,7 @@
   },
   {
     "tag": "솔직한",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "활기찬",
@@ -37,23 +37,23 @@
   },
   {
     "tag": "정직한",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "과묵한",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "상상력",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "열정적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "일관적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "인내력",
@@ -69,7 +69,7 @@
   },
   {
     "tag": "학구열 있는",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "협동적인",
@@ -77,19 +77,19 @@
   },
   {
     "tag": "희망적인",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "의욕적인",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "자제력",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "직관적",
-    "weight": 3
+    "weight": 3.5
   },
   {
     "tag": "노래",
@@ -104,11 +104,7 @@
     "weight": 4
   },
   {
-    "tag": "대구",
-    "weight": 4
-  },
-  {
     "tag": "국어국문",
-    "weight": 3
+    "weight": 3.5
   }
 ]
