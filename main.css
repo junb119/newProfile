@@ -416,6 +416,7 @@ header a.active {
 #dialog-content .portfolio_dialog_bg {
   position: relative;
   flex: 1;
+  max-width: 70%;
   min-width: 50%;
 }
 .portfolio_dialog_bg img {
@@ -637,7 +638,7 @@ header a.active {
     flex-direction: column;
   }
   #dialog-content .portfolio_dialog_bg {
-    max-height: 40%;
+    min-width: 30%;
     flex: 1;
   }
   #dialog-content .portfolio_dialog_textBox {
@@ -677,6 +678,14 @@ header a.active {
   }
   .skill_box ul li {
     width: 100%;
+  }
+  #dialog-content .portfolio_dialog_bg {
+    max-width: none;
+    height: 40%;
+  }
+  .grid-item img{
+    /* aspect-ratio: .8/ */
+    max-height: 300px;
   }
   .portfolio_dialog_textBox h3 {
     text-align: center;

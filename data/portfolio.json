@@ -3,7 +3,7 @@
     "id": "pokemon",
     "filter": ["toy_project", "javascript"],
     "thumb": "./img/pika.webp",
-    "bg": "/img/pika.webp",
+    "bg": "./img/pika.webp",
     "title": "pokemon 카드 게임",
     "skills": ["html", "css", "javascript"],
     "desc": ["pokemon 메인페이지 클론 사이트 입니다."],
@@ -80,7 +80,7 @@
     "filter": ["web_project", "javascript", "jquery"],
 
     "thumb": "./img/mirae.png",
-    "bg": "/img/mirae_bg.png",
+    "bg": "./img/mirae_bg.png",
     "title": "미래에셋 리뉴얼 페이지",
     "skills": ["html", "css", "javascript"],
     "desc": [
@@ -97,7 +97,7 @@
     "id": "starbucks",
     "filter": ["web_project", "javascript"],
     "thumb": "./img/starbucks.png",
-    "bg": "/img/starbucks_bg.png",
+    "bg": "./img/starbucks_bg.png",
     "title": "스타벅스 메인 페이지",
     "skills": ["html", "css", "javascript"],
     "desc": ["스타벅스 메인페이지 클론 사이트 입니다."],
@@ -111,7 +111,7 @@
     "filter": ["web_project", "javascript"],
 
     "thumb": "./img/uniqlo.png",
-    "bg": "/img/uniqlo_bg.png",
+    "bg": "./img/uniqlo_bg.png",
     "title": "uniqlo 메인 페이지",
     "skills": ["html", "css", "javascript"],
     "desc": ["uniqlo 메인페이지 클론 사이트 입니다."],
@@ -124,7 +124,7 @@
     "filter": ["web_project", "javascript", "PHP", "jquery"],
 
     "thumb": "./img/worldHello.png",
-    "bg": "/img/worldHello.png",
+    "bg": "./img/worldHello.png",
     "title": "hello world 인터넷강의 사이트",
     "skills": [
       "html",
@@ -145,7 +145,7 @@
     "filter": ["web_project", "javascript", "PHP", "jquery"],
 
     "thumb": "./img/profile.png",
-    "bg": "/img/profile.png",
+    "bg": "./img/profile.png",
     "title": "Junb's Profile Page",
     "skills": ["html", "css", "javascript"],
     "desc": ["지금 보고 계시는 저의 프로필 페이지입니다."],
