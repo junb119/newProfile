@@ -97,7 +97,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   padding: 0.25em;
   text-transform: capitalize;
   color: white;
@@ -179,8 +179,8 @@ header a.active {
 
 /* about */
 .about_container {
-  margin-top: 2rem;
-  gap: 2rem;
+  margin-top: 2em;
+  gap: 2em;
 }
 .about_tag {
   display: grid;
@@ -252,7 +252,7 @@ header a.active {
   transform: translateX(-50%);
 } */
 .selected_skill h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%);
@@ -346,7 +346,7 @@ header a.active {
   transition: width 1.5s ease;
 }
 .skill_comment {
-  font-size: 1rem;
+  font-size: 1em;
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -383,7 +383,7 @@ header a.active {
 }
 
 .grid-item figcaption {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   position: absolute;
   top: 0;
   color: #555;
@@ -407,47 +407,62 @@ header a.active {
 #dialog-content {
   background: #666;
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
-  max-width: 90%;
-  max-height: 80%;
-  padding: 1rem;
+  width: 70%;
+  /* height: 80%; */
+  padding: 44px 70px;
+  /* overflow-y: scroll; */
 }
 #dialog-content .portfolio_dialog_bg {
   position: relative;
   flex: 1;
-  max-width: 70%;
-  min-width: 50%;
+  width: 100%;
+  max-height: 70%;
 }
 .portfolio_dialog_bg img {
   width: 100%;
   height: 100%;
+  max-height: 70vh;
   object-fit: contain;
-  display: block;
 }
 #dialog-content .portfolio_dialog_textBox {
   position: relative;
   /* flex: 1; */
-  gap: 1rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  gap: 0.5em;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+  color: white;
 }
 
 .portfolio_dialog_textBox h3 {
   display: inline;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1.4;
   color: white;
   text-transform: capitalize;
   word-break: keep-all;
 }
+.portfolio_dialog_textBox .dialog_tag {
+  display: flex;
+  /* gap: 30px; */
+  padding: 5px;
+  align-items: center;
+}
+.portfolio_dialog_textBox .dialog_tag .tag_name {
+  display: inline-block;
+  font-weight: bold;
+  width: 100px;
+  text-transform: uppercase;
+}
+.portfolio_dialog_textBox .dialog_tag ul {
+  gap: 8px;
+}
 .portfolio_dialog_textBox .skill_list {
   display: flex;
   flex-wrap: wrap;
-
-  gap: 0.5rem;
 }
-.portfolio_dialog_textBox .skill_list li {
+.tag {
   line-height: 1.6;
   background: rgb(111, 204, 111);
   border-radius: 8px;
@@ -455,6 +470,7 @@ header a.active {
   text-transform: uppercase;
   color: white;
   letter-spacing: 2px;
+  /* margin-right: 8px ; */
 }
 .portfolio_git.null {
   display: none;
@@ -462,7 +478,7 @@ header a.active {
 .portfolio_dialog_textBox .dialog_desc {
   color: white;
   margin: 2em 0;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   line-height: 1.6;
   text-transform: uppercase;
 }
@@ -475,25 +491,32 @@ header a.active {
 
 .portfolio_dialog_textBox .feature h4 {
   color: white;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
-.feature ul {
+
+.feature .feature_container {
+}
+.feature .feature_container img {
+  /* width: 100%; */
+}
+
+/* .feature ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.5em;
   align-items: start;
   width: 100%;
-}
+} */
 .feature ul li {
   color: white;
   list-style-type: disc;
-  margin-left: 3rem;
+  margin-left: 3em;
   word-wrap: break-word;
   word-break: break-all;
   /* 단어 중간에도 줄바꿈 */
   line-height: 1.6;
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 .dalog_link a {
@@ -516,7 +539,7 @@ header a.active {
 }
 
 .contact_container {
-  margin: 2rem auto;
+  margin: 2em auto;
   text-align: center;
 }
 .contact_form {
@@ -541,12 +564,12 @@ header a.active {
   background: rgba(0, 0, 0, 0.2);
 } */
 .thankyou_message {
-  margin: 2rem auto;
+  margin: 2em auto;
 }
 .thankyou_message p {
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.6;
 }
 /* contact */
@@ -635,18 +658,22 @@ header a.active {
     grid-template-columns: repeat(2, auto); /* 3개의 열 설정 */
   }
   #dialog-content {
-    flex-direction: column;
+    /* flex-direction: column; */
+    padding: 20px;
+    width: 90%;
+    height: 90vh;
+    overflow-y: scroll;
   }
   #dialog-content .portfolio_dialog_bg {
-    min-width: 30%;
-    flex: 1;
+    /* min-width: 30%;
+    flex: 1; */
   }
   #dialog-content .portfolio_dialog_textBox {
-    flex: 2;
-    text-align: center;
+    /* flex: 2;
+    text-align: center; */
   }
   .portfolio_dialog_textBox .skill_list {
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .contact_form {
@@ -680,14 +707,17 @@ header a.active {
     width: 100%;
   }
   #dialog-content .portfolio_dialog_bg {
-    max-width: none;
-    height: 40%;
+    /* max-width: none;
+    height: 40%; */
   }
-  .grid-item img{
+  .grid-item img {
     /* aspect-ratio: .8/ */
     max-height: 300px;
   }
   .portfolio_dialog_textBox h3 {
-    text-align: center;
+    /* text-align: center; */
+  }
+  .portfolio_dialog_textBox .dialog_tag .tag_name {
+    width: 80px;
   }
 }

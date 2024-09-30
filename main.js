@@ -255,20 +255,25 @@ function setDialog(datas, thumb) {
   const dialogGit = dialog.querySelector(
     ".portfolio_dialog_textBox .portfolio_git"
   );
-  const dialogSkills = dialog.querySelector(".portfolio_dialog_textBox ul");
+  const dialogSkills = dialog.querySelector(
+    ".portfolio_dialog_textBox .skill_list"
+  );
   const dialogDesc = dialog.querySelector(
     ".portfolio_dialog_textBox .dialog_desc"
   );
   const dialogFeauture = dialog.querySelector(
-    ".portfolio_dialog_textBox .feature ul"
+    ".portfolio_dialog_textBox .feature "
   );
+  // const dialogFeauture = dialog.querySelector(
+  //   ".portfolio_dialog_textBox .feature "
+  // );
+
   for (let data of datas) {
     if (data.id === id) {
       dialogImg.setAttribute("src", data.bg);
       dialogImg.setAttribute("alt", data.title);
       dialogTitle.innerText = data.title;
       dialogDirect.setAttribute("href", data.path);
-      console.log(data.github);
       if (data.github === "null") {
         dialogGit.classList.add("null");
       } else {
@@ -277,7 +282,7 @@ function setDialog(datas, thumb) {
       }
       let skilllist = "";
       data.skills.forEach((skill) => {
-        skilllist += `<li>${skill}</li>`;
+        skilllist += `<li class="tag">${skill}</li>`;
       });
       dialogSkills.innerHTML = skilllist;
       let descList = "";
@@ -285,13 +290,47 @@ function setDialog(datas, thumb) {
         descList += `<p>${desc}</p>`;
       });
       dialogDesc.innerHTML = descList;
-      features = "";
-      data.feature.forEach((feature) => {
-        features += `<li>${feature}</li>`;
-      });
-      dialogFeauture.innerHTML = features;
+      dialogFeauture.innerHTML = writeFeatures(data.feature);
+
+      let featureImgs = document.querySelectorAll(".feature_container img");
+      if (featureImgs.length > 0) {
+        for (let img of featureImgs) {
+          img.style.width = img.dataset.width;
+          img.style.height = img.dataset.height;
+        }
+      }
     }
   }
+
+  function writeFeatures(features) {
+    let result = "<h4>- 주요 기능 -</h4>";
+    for (let feature of features) {
+      switch (feature.type) {
+        case "img":
+          result += `<div class="feature_container"><img src='${feature.imgPath}' data-width=${feature.width} data-height="${feature.height}"></div>`;
+          break;
+        case "descript":
+          result += `<div class="feature_container"><p>${feature.textContext}</p></div>`;
+          break;
+        case "featureName":
+          result += `<div class="feature_container"><h3>${feature.title}</h3></div>`;
+          break;
+        case "list":
+          result += "<ul>";
+
+          for (let item of feature.items) {
+            result += `<div class="feature_container"><li>${item} </li></div>`;
+          }
+          result += "</ul>";
+          break;
+        default:
+          console.log("type을 확인해주세요");
+          break;
+      }
+    }
+    return result;
+  }
+
   Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
 }
 
