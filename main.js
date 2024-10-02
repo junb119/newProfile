@@ -195,7 +195,7 @@ function setIsotope() {
           var button = event.target;
           var filterGroup =
             button.parentElement.getAttribute("data-filter-group");
-          var filterValue = button.getAttribute("data-filter");
+          var filterValue = button.getAttribute("data-filter").toLowerCase();
           // Update filter for the group
           filters[filterGroup] = filterValue;
           // Combine filters
@@ -224,7 +224,7 @@ function setIsotope() {
 function fetchPortfolio(data) {
   for (let gridItem of data) {
     const grid = document.querySelector(".grid");
-    const filter = gridItem.filter.join(" ");
+    const filter = gridItem.filter.join(" ").toLowerCase();
     grid.innerHTML += `<figure
       class="grid-item ${filter}"
     >
@@ -249,6 +249,18 @@ function setDialog(datas, thumb) {
   const dialog = document.getElementById("dialog-content");
   const dialogImg = dialog.querySelector(".portfolio_dialog_bg img");
   const dialogTitle = dialog.querySelector(".portfolio_dialog_textBox h3");
+  const dialogCategory = dialog.querySelector(
+    ".portfolio_dialog_textBox .category"
+  );
+  const dialogPeriod = dialog.querySelector(
+    ".portfolio_dialog_textBox .period"
+  );
+  const dialogTools = dialog.querySelector(".portfolio_dialog_textBox .tools");
+  const dialogRole = dialog.querySelector(".portfolio_dialog_textBox .role");
+  const dialogMembers = dialog.querySelector(
+    ".portfolio_dialog_textBox .members"
+  );
+
   const dialogDirect = dialog.querySelector(
     ".portfolio_dialog_textBox .portfolio_direct"
   );
@@ -274,17 +286,21 @@ function setDialog(datas, thumb) {
       dialogImg.setAttribute("alt", data.title);
       dialogTitle.innerText = data.title;
       dialogDirect.setAttribute("href", data.path);
+      dialogCategory.innerHTML = data.category;
+      dialogPeriod.innerHTML = data.period;
+      setTags(dialogTools, data.tools);
+      setTags(dialogRole, data.role);
+      setTags(dialogSkills, data.skills);
+
+      dialogMembers.innerHTML = data.members;
       if (data.github === "null") {
         dialogGit.classList.add("null");
       } else {
         dialogGit.classList.remove("null");
         dialogGit.setAttribute("href", data.github);
       }
-      let skilllist = "";
-      data.skills.forEach((skill) => {
-        skilllist += `<li class="tag">${skill}</li>`;
-      });
-      dialogSkills.innerHTML = skilllist;
+      setTags(dialogTools, data.tools);
+
       let descList = "";
       data.desc.forEach((desc) => {
         descList += `<p>${desc}</p>`;
@@ -301,7 +317,31 @@ function setDialog(datas, thumb) {
       }
     }
   }
-
+  function setTags(target, datas) {
+    let bg = {
+      html: "#ec3434",
+      css: "orange",
+      javascript: "yellow",
+      react: "green",
+      php: "skyblue",
+      bootstrap: "#9be79b",
+      "visual studio code": "#ed70ca",
+      jquery: "white",
+      mysql: "pink",
+      xampp: "beige",
+      react: "#8842f0",
+    };
+    let tagList = "";
+    for (let tagName of datas) {
+      tagList += `<li class="tag">${tagName}</li>`;
+    }
+    target.innerHTML = tagList;
+    const tags = document.querySelectorAll(".tag");
+    for (let tag of tags) {
+      const name = tag.innerText.toLowerCase();
+      tag.style.background = bg[name];
+    }
+  }
   function writeFeatures(features) {
     let result = "<h4>- 주요 기능 -</h4>";
     for (let feature of features) {
@@ -334,4 +374,11 @@ function setDialog(datas, thumb) {
   Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
 }
 
+let dialogDirect = document.querySelector(".portfolio_direct");
+dialogDirect.addEventListener("click", (e) => {
+  if (e.target.getAttribute("href") === "null") {
+    e.preventDefault();
+    alert("아직 준비중입니다.");
+  }
+});
 // --portfolio

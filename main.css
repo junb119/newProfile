@@ -171,7 +171,7 @@ header a.active {
   background: beige;
 }
 .slide3 {
-  background: black;
+  background: rgb(34, 51, 51);
 }
 .slide4 {
   background: rgb(125, 84, 177);
@@ -328,6 +328,7 @@ header a.active {
   text-transform: uppercase;
   color: white;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 .progress_bg {
   background: rgba(255, 255, 255, 0.7);
@@ -405,7 +406,7 @@ header a.active {
   background: rgba(255, 255, 255, 0.8);
 }
 #dialog-content {
-  background: #666;
+  background: #1b1b1e;
   display: none;
   flex-direction: column;
   gap: 20px;
@@ -413,6 +414,7 @@ header a.active {
   /* height: 80%; */
   padding: 44px 70px;
   /* overflow-y: scroll; */
+  box-shadow: 0 0 10px rgba(255, 255, 255, .5);
 }
 #dialog-content .portfolio_dialog_bg {
   position: relative;
@@ -462,14 +464,20 @@ header a.active {
   display: flex;
   flex-wrap: wrap;
 }
+.dialog_tag span {
+  line-height: 1.6;
+}
 .tag {
   line-height: 1.6;
-  background: rgb(111, 204, 111);
-  border-radius: 8px;
-  padding: 5px;
-  text-transform: uppercase;
-  color: white;
+  background: #8842f0;
+  background: white;
+  border-radius: 0.3em;
+  padding: 0.2em 0.5em;
+  /* text-transform: capitalize; */
+  color: rgb(33, 33, 33);
   letter-spacing: 2px;
+  font-size: 0.8em;
+  font-weight: 700;
   /* margin-right: 8px ; */
 }
 .portfolio_git.null {
@@ -480,7 +488,6 @@ header a.active {
   margin: 2em 0;
   font-size: 1.2em;
   line-height: 1.6;
-  text-transform: uppercase;
 }
 .portfolio_dialog_textBox .dialog_desc p + p {
   margin-top: 1em;
@@ -523,7 +530,7 @@ header a.active {
   display: inline-block;
   text-decoration: none;
   color: white;
-  background: #000;
+  background: #666;
   padding: 20px;
   text-transform: capitalize;
   transition: 0.3s;
@@ -668,9 +675,13 @@ header a.active {
     /* min-width: 30%;
     flex: 1; */
   }
+  
   #dialog-content .portfolio_dialog_textBox {
     /* flex: 2;
     text-align: center; */
+  }
+  .portfolio_dialog_textBox .dialog_tag{
+    display: block;
   }
   .portfolio_dialog_textBox .skill_list {
     /* justify-content: center; */
