@@ -346,6 +346,20 @@ function setDialog(datas, thumb) {
     let result = "<h4>- 주요 기능 -</h4>";
     for (let feature of features) {
       switch (feature.type) {
+        case "gallery":
+          result +=
+            '<div class="feature_container" style="display: grid; grid-template-columns: repeat(2, auto); gap: 1em;">';
+
+          for (let item of feature.list) {
+            result += `<img src="${item}"> `;
+          }
+          result += "</div>";
+          break;
+        case "line":
+          if (feature.shape)
+            result += `<div class="feature_container"><hr style="${feature.shape}"></div>`;
+          else result += `<div class="feature_container"><hr></div>`;
+          break;
         case "img":
           result += `<div class="feature_container"><img src='${feature.imgPath}' data-width=${feature.width} data-height="${feature.height}"></div>`;
           break;
@@ -356,10 +370,10 @@ function setDialog(datas, thumb) {
           result += `<div class="feature_container"><h3>${feature.title}</h3></div>`;
           break;
         case "list":
-          result += "<ul>";
+          result += '<ul class="feature_container">';
 
           for (let item of feature.items) {
-            result += `<div class="feature_container"><li>${item} </li></div>`;
+            result += `<li>${item} </li>`;
           }
           result += "</ul>";
           break;

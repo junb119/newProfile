@@ -2,16 +2,16 @@
   {
     "id": "pokemon",
     "category": "토이 프로젝트",
-    "period": "2023.07 ~ 2024.08",
-    "tools": ["Visual Studio Code", "figma"],
+    "period": "2024.09 ~ 진행중",
+    "tools": ["Visual Studio Code"],
     "role": ["기획", "개발"],
     "members": "1명",
-    "filter": ["toy_project", "JavaScript"],
+    "filter": ["toy_project", "JavaScript", "react"],
     "thumb": "./img/project/toy/cardgame/pika.webp",
     "bg": "./img/project/toy/cardgame/pika.webp",
     "title": "pokemon 카드 게임",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "desc": ["pokemon 메인페이지 클론 사이트 입니다."],
+    "skills": ["HTML", "CSS", "JavaScript", "React"],
+    "desc": ["Pokemon 이미지를 이용한 간단한 카드 맞추기 게임입니다."],
     "feature": ["a", "b", "c"],
     "github": "null",
     "path": "null"
@@ -19,66 +19,127 @@
   {
     "id": "mirae",
     "category": "웹 프로젝트",
-    "period": "2023.07 ~ 2024.08",
-    "tools": ["Visual Studio Code"],
-    "role": ["기획", "개발"],
-    "members": "1명",
+    "period": "2024. 03. 04 ~ 2024. 04. 03",
+    "tools": ["Visual Studio Code", "Figma"],
+    "role": ["기획", "디자인", "개발"],
+    "members": "3명",
     "filter": ["web_project", "JavaScript", "Jquery"],
 
     "thumb": "./img/project/web/mirae/mirae.png",
     "bg": "./img/project/web/mirae/mirae_bg.png",
-    "title": "미래에셋 리뉴얼 페이지",
-    "skills": ["HTML", "CSS", "JavaScript"],
+    "title": "미래에셋금융그룹 리뉴얼 페이지",
+    "skills": ["HTML", "CSS", "JavaScript", "Jquery"],
     "desc": [
-      "미래에셋 리뉴얼 페이지입니다.",
-      "HTML, CSS , JavaScript를 사용한 정적페이지",
-      "                      Fullpage, 다양한 스크롤 애니메이션과 동적 효과를 사용해 인터렉티브 느낌을 줍니다."
+      "미래에셋금융그룹 홈페이지를 리뉴얼 한 웹사이트입니다.",
+      "HTML, CSS , JavaScript , Jquery를 사용한 정적페이지 입니다.",
+      "다양한 스크롤 애니메이션과 동적 효과를 구현하였습니다."
     ],
     "feature": [
       {
         "type": "img",
-        "imgPath": "./img/project/web/mirae/mirae.png",
-        "width": "50%",
-        "height": "100%"
+        "imgPath": "./img/project/web/mirae/mirae_main.gif"
       },
-      { "type": "featureName", "title": "제목1" },
-      { "type": "descript", "textContext": "context1" },
-      { "type": "list", "items": ["list1", "list2"] },
-      { "type": "img", "imgPath": "./img/project/toy/cardgame/pika.webp" }
+      { "type": "featureName", "title": "메인 페이지" },
+      {
+        "type": "descript",
+        "textContext": "메인 페이지는 웹사이트의 간판이므로 사용자의 이목을 끌 수 있도록 다양한 애니메이션과 동적효과를 사용하였습니다."
+      },
+      {
+        "type": "list",
+        "items": [
+          "접속 시 타이틀 문구와 배경이미지가 나타나는 애니메이션",
+          "스크롤에 따라 크기와 위치가 변하는 이미지, 활성화 되는 문구",
+          "숫자 증가 애니메이션",
+          "가로 스크롤 슬라이드"
+        ]
+      },
+      { "type": "line", "shape": "" },
+      { "type": "img", "imgPath": "./img/project/web/mirae/mirae_global.gif" },
+      { "type": "featureName", "title": "Fullpage UI 사용" },
+      {
+        "type": "descript",
+        "textContext": "짧고 단순한 문구만 있는 경우 Fullpage UI로 가독성을 높이고 주목할 수 있도록 디자인 했습니다."
+      },
+      { "type": "line", "shape": "" },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/mirae/mirae_news.gif",
+          "./img/project/web/mirae/mirae_adv.gif"
+        ]
+      },
+      { "type": "featureName", "title": "비동기 데이터 연동" },
+      {
+        "type": "descript",
+        "textContext": "json 데이터로 비동기 연동하여 뉴스와 광고 자료들을 표시하고 탐색하기 쉽도록 페이지네이션을 구현하였습니다."
+      },
+      { "type": "line", "shape": "" },
+
+      { "type": "img", "imgPath": "./img/project/web/mirae/mirae_ci.gif" },
+      { "type": "line", "shape": "" },
+      { "type": "featureName", "title": "앞으로 개선 및 보완할 점" },
+      {
+        "type": "list",
+        "items": [
+          "반응형 페이지 미완성",
+          "데이터베이스를 통한 데이터 연동",
+          "중복 코드, 최적화 개선을 위한 코드리팩토링",
+          "사소한 버그 수정",
+          "미구현 기능 구현(언어 변환, 글로벌지도 서브페이지 등)"
+        ]
+      }
     ],
     "github": "https://github.com/junb119/Team_Dongdongju",
     "path": "https://junb119.github.io/Team_Dongdongju/"
   },
-
   {
     "id": "starbucks",
     "category": "웹 프로젝트",
-    "period": "2023.07 ~ 2024.08",
+    "period": "2022.06 ~ 2022.11",
     "tools": ["Visual Studio Code"],
-    "role": ["기획", "개발"],
+    "role": ["기획", "디자인", "개발"],
     "members": "1명",
     "filter": ["web_project", "JavaScript"],
     "thumb": "./img/project/web/starbucks/starbucks.png",
     "bg": "./img/project/web/starbucks/starbucks_bg.png",
-    "title": "스타벅스 메인 페이지",
+    "title": "스타벅스 메인 페이지 클론코딩",
     "skills": ["HTML", "CSS", "JavaScript"],
-    "desc": ["스타벅스 메인페이지 클론 사이트 입니다."],
+    "desc": ["스타벅스 메인페이지의 ui, ux를 클론 코딩한 정적 사이트입니다."],
     "feature": [
-      { "type": "img", "imgPath": "./img/project/web/mirae/mirae.png" },
-      { "type": "descript", "textContext": "context1" },
-      { "type": "featureName", "title": "제목1" },
-      { "type": "list", "items": ["list1", "list2"] }
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/starbucks/starbucks1.gif"
+      },
+      { "type": "featureName", "title": "슬라이드 구현" },
+      {
+        "type": "list",
+        "items": [
+          "공지사항 : 세로 오토 슬라이드",
+          "프로모션 : 가로 오토 슬라이드"
+        ]
+      },
+      { "type": "line", "shape": "" },
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/starbucks/starbucks2.gif"
+      },
+      { "type": "featureName", "title": "스크롤 애니메이션" },
+      { "type": "line", "shape": "" },
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/starbucks/starbucks3.gif"
+      },
+      { "type": "featureName", "title": "인터렉션 애니메이션" }
     ],
     "github": "https://github.com/junb119/starbucks",
     "path": "https://junb119.github.io/starbucks/"
   },
-
   {
     "id": "uniqlo",
     "category": "웹 프로젝트",
-    "period": "2023.07 ~ 2024.08",
-    "tools": ["Visual Studio Code"],
-    "role": ["기획", "개발"],
+    "period": "2024.02.05 ~ 2024.02.25",
+    "tools": ["Visual Studio Code", "Figma"],
+    "role": ["기획", "디자인", "개발"],
     "members": "1명",
     "filter": ["web_project", "JavaScript"],
 
@@ -86,27 +147,42 @@
     "bg": "./img/project/web/uniqlo/uniqlo_bg.png",
     "title": "uniqlo 메인 페이지",
     "skills": ["HTML", "CSS", "JavaScript"],
-    "desc": ["uniqlo 메인페이지 클론 사이트 입니다."],
+    "desc": ["uniqlo 메인페이지를 리뉴얼한 정적 웹사이트 입니다."],
     "feature": [
-      { "type": "img", "imgPath": "./img/project/web/mirae/mirae.png" },
-      { "type": "descript", "textContext": "context1" },
-      { "type": "featureName", "title": "제목1" },
-      { "type": "list", "items": ["list1", "list2"] }
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/uniqlo/uniqlo_header.gif"
+      },
+      { "type": "featureName", "title": "3 depth 헤더" },
+      {
+        "type": "descript",
+        "textContext": "header 메뉴의 가짓수가 많아서 3depth 형태로 구성해서 최대한 가시성과 가독성을 높이고자 하였습니다."
+      },
+      { "type": "line", "shape": "" },
+
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/uniqlo/uniqlo2.png",
+          "./img/project/web/uniqlo/uniqlo3.png",
+          "./img/project/web/uniqlo/uniqlo4.png"
+        ]
+      }
     ],
     "github": "https://github.com/junb119/green_Portfolio1",
-    "path": "https://github.com/junb119/green_Portfolio1"
+    "path": "https://junb119.github.io/green_Portfolio1/"
   },
   {
     "id": "helloworld",
     "category": "웹 프로젝트",
-    "period": "2023.07 ~ 2024.08",
-    "tools": ["Visual Studio Code", "xampp"],
-    "role": ["기획", "개발"],
-    "members": "1명",
+    "period": "2024.04.01 ~ 2024.05.22",
+    "tools": ["Visual Studio Code", "xampp", "Figma", "Mysql Workbench"],
+    "role": ["기획", "디자인", "개발"],
+    "members": "3명",
     "filter": ["web_project", "JavaScript", "PHP", "Jquery"],
 
-    "thumb": "./img/project/web/helloworld/worldHello.png",
-    "bg": "./img/project/web/helloworld/worldHello.png",
+    "thumb": "./img/project/web/helloworld/helloworld_thumb.png",
+    "bg": "./img/project/web/helloworld/helloworld_bg.png",
     "title": "hello world 인터넷강의 사이트",
     "skills": [
       "HTML",
@@ -117,12 +193,160 @@
       "Jquery",
       "BootStrap"
     ],
-    "desc": ["hello world 인터넷 강의 사이트 입니다."],
+    "desc": [
+      "인터넷 강의를 볼 수 있는 인강 웹사이트 입니다.",
+      "유저 페이지(FrontEnd) , 관리자 페이지(Backend)로 구분되며 관리자는 관리자 페이지에서 유저페이지를 관리할 수 있습니다.",
+      "유저, 강의, 쿠폰 등을 데이터베이스를 통해 저장, 관리합니다.",
+      "회원가입을 하고 로그인하여 원하는 강의를 구매하고 시청할 수 있습니다.",
+      "회원마다 강의 구매내역, 보유 쿠폰, 질문 내역 등을 따로 관리하며 학습을 위한 정보들을 제공합니다.",
+      "쿠폰을 발급받아 할인된 가격에 구매할 수 있습니다.",
+      "회원정보는 암호화되고 sql injection을 방어해 보안을 강화하였습니다.",
+      "dothome으로 배포된 사이트입니다."
+    ],
     "feature": [
-      { "type": "img", "imgPath": "./img/project/web/mirae/mirae.png" },
-      { "type": "descript", "textContext": "context1" },
-      { "type": "featureName", "title": "제목1" },
-      { "type": "list", "items": ["list1", "list2"] }
+      { "type": "featureName", "title": "- FrontEnd 페이지 -" },
+
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/helloworld/helloworld1.png",
+          "./img/project/web/helloworld/helloworld2.png",
+          "./img/project/web/helloworld/helloworld3.png"
+        ]
+      },
+      { "type": "featureName", "title": "강의 검색 및 구매 페이지" },
+      {
+        "type": "descript",
+        "textContext": "원하는 강의를 검색 및 구매할 수 있습니다."
+      },
+      {
+        "type": "list",
+        "items": [
+          "강의 목록 페이지에서 강의를 직접 검색하거나 필터링하여 원하는 강의를 찾아볼 수 있습니다.",
+          "강의 상세 페이지에서 더 자세한 강의 정보를 볼 수 있고 회원가입을 하면 장바구니에 담거나 구매하여 시청할 수 있습니다.",
+          "강의 구매전 다른 사람이 남긴 수강평을 확인할 수 있으며 강의를 구매하면 수강평을 새롭게 남길 수 있습니다."
+        ]
+      },
+      {
+        "type": "line"
+      },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/helloworld/helloworld4.png",
+          "./img/project/web/helloworld/helloworld5.png",
+          "./img/project/web/helloworld/helloworld7.png",
+          "./img/project/web/helloworld/helloworld10.png"
+        ]
+      },
+      { "type": "featureName", "title": "공지사항 , QnA 게시판" },
+      {
+        "type": "descript",
+        "textContext": "공지사항과 QnA 게시판을 통해 유저와 커뮤니케이션을 할 수 있습니다."
+      },
+      {
+        "type": "list",
+        "items": [
+          "관리자(Backend)가 작성한 공지사항을 유저(Frontend)가 열람하고 필터링하고 검색할 수 있습니다",
+          "QnA게시판을 통해 질문을 열람할 수 있습니다. 답변 여부를 쉽게 확인할 수 있습니다",
+          "질문글을 작성할 수 있으며 질문글에 댓글로 답변을 남길 수 있습니다. 답변을 채택하면 해당 글은 답변완료 상태가 됩니다."
+        ]
+      },
+      {
+        "type": "line"
+      },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/helloworld/helloworld8.png",
+          "./img/project/web/helloworld/helloworld9.png",
+          "./img/project/web/helloworld/helloworld6.png"
+        ]
+      },
+      { "type": "featureName", "title": "회원가입 및 유저페이지" },
+      {
+        "type": "list",
+        "items": [
+          "회원가입 시에는 여러 인증절차와 유효성 검사를 해야합니다.",
+          "회원가입을 하면 강의를 구매하고 쿠폰을 발급받을 수 있습니다",
+          "유저의 학습내역과 여러 정보를 유저페이지에서 확인할 수 있습니다."
+        ]
+      },
+      {
+        "type": "line"
+      },
+      { "type": "featureName", "title": "- BackEnd 페이지 -" },
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/helloworld/helloworld11.png",
+        "width": "70%"
+      },
+      {
+        "type": "featureName",
+        "title": "관리자 로그인 페이지"
+      },
+      {
+        "type": "descript",
+        "textContext": "유저페이지를 관리하기 위해서는 인증을 통해 관리자페이지에 로그인해야 합니다."
+      },
+      {
+        "type": "line"
+      },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/helloworld/helloworld12.png",
+          "./img/project/web/helloworld/helloworld13.png",
+          "./img/project/web/helloworld/helloworld14.png",
+          "./img/project/web/helloworld/helloworld15.png"
+        ]
+      },
+      {
+        "type": "descript",
+        "textContext": "관리자 페이지에서는 여러 항목을 통해 유저 페이지(FrontEnd)를 관리할 수 있습니다"
+      },
+      {
+        "type": "list",
+        "items": [
+          "대시보드에서 유저 수, 이번달 수익, 강의별 판매량 등의 정보를 확인할 수 있습니다",
+          "강의를 등록, 수정, 삭제하여 강의를 관리할 수 있습니다",
+          "유저 정보를 검색하고 확인하여 관리할 수 있으며, 특정 유저에게 메시지를 보낼 수 있습니다.",
+          "쿠폰을 등록, 수정, 삭제하여 쿠폰을 관리할 수 있습니다."
+        ]
+      },
+      {
+        "type": "line"
+      },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/helloworld/helloworld16.png",
+          "./img/project/web/helloworld/helloworld17.png"
+        ]
+      },
+      {
+        "type": "featureName",
+        "title": "데이터베이스 구조"
+      },
+      {
+        "type": "descript",
+        "textContext": "항목별 테이블을 만들고 데이터베이스를 관리합니다. 유저데이터와 같이 민감한 정보는 암호화하여 보안을 강화했습니다."
+      },
+      {
+        "type":"line"
+      },
+      {
+        "type": "featureName",
+        "title": "앞으로 개선 및 보완할 점"
+      },
+      {
+        "type": "list",
+        "items": [
+          "투박한 ui, ux 디자인 개선",
+          "데이터베이스 관련 남아있는 버그 픽스",
+          "불필요하고 복잡한 코드 리팩토링"
+        ]
+      }
     ],
     "github": "https://github.com/junb119/Team-sudo",
     "path": "http://worldhello.dothome.co.kr/helloworld/"

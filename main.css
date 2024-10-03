@@ -400,6 +400,7 @@ header a.active {
   word-break: keep-all;
   line-height: 1.6;
   text-align: center;
+  padding: 0 .5em;
 }
 .grid-item:hover figcaption {
   opacity: 1;
@@ -414,7 +415,7 @@ header a.active {
   /* height: 80%; */
   padding: 44px 70px;
   /* overflow-y: scroll; */
-  box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 #dialog-content .portfolio_dialog_bg {
   position: relative;
@@ -503,9 +504,20 @@ header a.active {
 }
 
 .feature .feature_container {
+  margin-bottom: 1em;
+}
+.feature .feature_container p {
+  font-size: 1.2em;
 }
 .feature .feature_container img {
-  /* width: 100%; */
+  width: 100%;
+  /* aspect-ratio: /; */
+  height: 100%;
+  object-fit: cover;
+}
+.feature .feature_container hr {
+  border: 3px solid white;
+  margin: 3em 0;
 }
 
 /* .feature ul {
@@ -518,10 +530,9 @@ header a.active {
 .feature ul li {
   color: white;
   list-style-type: disc;
-  margin-left: 3em;
+  margin-left: 2em;
   word-wrap: break-word;
   word-break: break-all;
-  /* 단어 중간에도 줄바꿈 */
   line-height: 1.6;
   font-size: 1.2em;
 }
@@ -675,12 +686,12 @@ header a.active {
     /* min-width: 30%;
     flex: 1; */
   }
-  
+
   #dialog-content .portfolio_dialog_textBox {
     /* flex: 2;
     text-align: center; */
   }
-  .portfolio_dialog_textBox .dialog_tag{
+  .portfolio_dialog_textBox .dialog_tag {
     display: block;
   }
   .portfolio_dialog_textBox .skill_list {
