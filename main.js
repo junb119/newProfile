@@ -346,6 +346,10 @@ function setDialog(datas, thumb) {
     let result = "<h4>- 주요 기능 -</h4>";
     for (let feature of features) {
       switch (feature.type) {
+        case "link":
+          const links = feature.path;
+          result += `<div class="feature_container"><a href="${links[1]}" target="_blank">${links[0]}</a></div>`;
+          break;
         case "gallery":
           result +=
             '<div class="feature_container" style="display: grid; grid-template-columns: repeat(2, auto); gap: 1em;">';
