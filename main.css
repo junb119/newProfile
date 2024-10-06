@@ -460,8 +460,6 @@ header a.active {
 }
 .portfolio_dialog_textBox .dialog_tag ul {
   gap: 8px;
-}
-.portfolio_dialog_textBox .skill_list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -505,6 +503,12 @@ header a.active {
 
 .feature .feature_container {
   margin-bottom: 1em;
+  line-height: 1.6;
+}
+.feature .feature_container.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1em;
 }
 .feature .feature_container p {
   font-size: 1.2em;
@@ -693,7 +697,9 @@ header a.active {
     /* min-width: 30%;
     flex: 1; */
   }
-
+  .feature .feature_container.gallery {
+    grid-template-columns: repeat(1, auto);
+  }
   #dialog-content .portfolio_dialog_textBox {
     /* flex: 2;
     text-align: center; */

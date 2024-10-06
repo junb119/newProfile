@@ -352,7 +352,7 @@ function setDialog(datas, thumb) {
           break;
         case "gallery":
           result +=
-            '<div class="feature_container" style="display: grid; grid-template-columns: repeat(2, auto); gap: 1em;">';
+            '<div class="feature_container gallery">';
 
           for (let item of feature.list) {
             result += `<img src="${item}"> `;
