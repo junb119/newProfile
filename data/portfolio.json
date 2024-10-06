@@ -21,7 +21,7 @@
     "category": "웹 프로젝트",
     "period": "2024. 03. 04 ~ 2024. 04. 03",
     "tools": ["Visual Studio Code", "Figma"],
-    "role": ["기획", "디자인", "개발"],
+    "role": ["기획", "디자인", "개발", "팀리더"],
     "members": "3명",
     "filter": ["web_project", "JavaScript", "Jquery"],
 
@@ -177,13 +177,13 @@
     "category": "웹 프로젝트",
     "period": "2024.04.01 ~ 2024.05.22",
     "tools": ["Visual Studio Code", "xampp", "Figma", "Mysql Workbench"],
-    "role": ["기획", "디자인", "개발"],
+    "role": ["기획", "디자인", "개발", "팀리더"],
     "members": "3명",
     "filter": ["web_project", "JavaScript", "PHP", "Jquery"],
 
     "thumb": "./img/project/web/helloworld/helloworld_thumb.png",
     "bg": "./img/project/web/helloworld/helloworld_bg.png",
-    "title": "hello world 인터넷강의 사이트",
+    "title": "Hello world 인터넷강의 사이트",
     "skills": [
       "HTML",
       "CSS",
@@ -361,22 +361,55 @@
   {
     "id": "profile",
     "category": "웹 프로젝트",
-    "period": "2023.07 ~ 2024.08",
+    "period": "2024.09 ~ 2024 .10. 04",
     "tools": ["Visual Studio Code"],
-    "role": ["기획", "개발"],
+    "role": ["기획", "디자인", "개발"],
     "members": "1명",
     "filter": ["web_project", "JavaScript"],
-
     "thumb": "./img/project/web/profile/profile.png",
-    "bg": "./img/project/web/profile/profile.png",
+    "bg": "./img/project/web/profile/profile_about.png",
     "title": "Junb's Profile Page",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "desc": ["지금 보고 계시는 저의 프로필 페이지입니다."],
+    "skills": ["HTML", "CSS", "JavaScript", "반응형"],
+    "desc": ["지금 보고 계시는 프로필 페이지입니다."],
     "feature": [
-      { "type": "img", "imgPath": "./img/project/web/mirae/mirae.png" },
-      { "type": "descript", "textContext": "context1" },
-      { "type": "featureName", "title": "제목1" },
-      { "type": "list", "items": ["list1", "list2"] }
+      {
+        "type": "img",
+        "imgPath": "./img/project/web/profile/profile_intro.gif"
+      },
+      { "type": "featureName", "title": "스크롤 애니메이션" },
+      {
+        "type": "descript",
+        "textContext": "애플 에어팟 사이트에 영감을 받아 접속시 Intro를 스크롤에 따라 배경과 문구가 바뀌는 스크롤 애니메이션으로 구현했습니다. "
+      },
+      { "type": "line" },
+      {
+        "type": "gallery",
+        "list": [
+          "./img/project/web/profile/profile_about.png",
+          "./img/project/web/profile/profile_skill.png",
+          "./img/project/web/profile/profile_portfolio.png",
+          "./img/project/web/profile/profile_contact.png"
+        ]
+      },
+      { "type": "featureName", "title": "메인페이지" },
+      {
+        "type": "descript",
+        "textContext": "메인 페이지는 심플하고 직관적인 슬라이드 방식으로 구현하였습니다."
+      },
+      { "type": "line" },
+      {
+        "type": "featureName",
+        "title": "앞으로 개선 및 보완할 점"
+      },
+      {
+        "type": "list",
+        "items": [
+          "React 앱으로 변환",
+          "백엔드 페이지 제작 및 firebase를 이용해 프로픽 페이지 관리가 용이하도록 개선",
+          "코드 리팩토링"
+        ]
+      },
+      { "type": "line" }
     ],
     "github": "https://github.com/junb119/newProfile",
     "path": "https://junb119.github.io/newProfile/"

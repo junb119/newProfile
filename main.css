@@ -229,9 +229,9 @@ header a.active {
 }
 .about_tag > li > * {
   display: inline-block;
-  background: beige;
+  background: #6794dc;
   padding: 20px;
-  color: #333;
+  color: beige;
   font-size: 1.5em;
 }
 #word_cloud {
